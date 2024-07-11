@@ -2,6 +2,8 @@
 
 <% @lists.each do |list| %>
 <p><%= list.name %></p>
+<%= cl_image_tag list.photo.key if list.photo.attached? %>
 <% end %>
 
 <%= link_to "Create Another List", new_list_path %>
+
